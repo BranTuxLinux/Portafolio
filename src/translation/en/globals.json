@@ -1,0 +1,14 @@
+{
+  "header": {
+    "hello-world": "hello"
+  },
+  "navbar": {
+    "home": "home",
+    "about": "about",
+    "portfolio": "portfolio",
+    "skills": "skills",
+    "projects": "projects",
+    "blog": "blog",
+    "contact": "contact"
+  }
+}
