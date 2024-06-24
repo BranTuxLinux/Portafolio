@@ -1,8 +1,7 @@
+@import './colors';
 :root{
-    color-scheme: dark;
+    background-color: $primary-900
 };
 #main{
-    display: flex;
-    flex-direction: row;
     
 }
