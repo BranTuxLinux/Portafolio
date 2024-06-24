@@ -3,6 +3,8 @@ import { BrowserRouter } from "react-router-dom";
 import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import "./assets/scss/stylesheets.scss";
+// import "./assets/scss/base/tailwind.css";
+
 import App from "./App.jsx";
 import { I18nextProvider } from "react-i18next";
 import i18next from "./translation/translate.init.jsx";

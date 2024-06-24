@@ -3,20 +3,19 @@ import Img_black from "../../assets/img/negro.png";
 import Img_white from "../../assets/img/blanco.png";
 import { useTheme } from "next-themes";
 import { capitalizeFirstLetter } from "../../utils/capitalize.tools";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 export const AsideBar = () => {
   const [t] = useTranslation("global");
   const { theme } = useTheme();
   return (
     <aside id="AsideBar">
       <div id="LOGO">
-        <h1></h1>
-        <img
-          src={theme == "dark" ? Img_black : Img_white}
-          alt="Logo"
-          className=""
-        />
+        <img src={theme == "dark" ? Img_black : Img_white} alt="Logo" />
       </div>
-      <div className="text-primary-600 flex flex-col dark:text-primary-500 text-3xl font-bold mb-4">
+      <div
+        id="items-nav"
+        className="text-primary-600 flex flex-col dark:text-primary-500 text-3xl font-bold mb-4"
+      >
         <a href="#" className="nav-items">
           <div className="p-3">
             <h2>{capitalizeFirstLetter(t("navbar.home"))}</h2>
@@ -42,6 +41,18 @@ export const AsideBar = () => {
             <h2>{capitalizeFirstLetter(t("navbar.contact"))}</h2>
           </div>
         </a>
+      </div>
+      <div className="social">
+        <div>
+          <a href="" target="_blank">
+            <FaGithub size={48} />
+          </a>
+        </div>
+        <div>
+          <a href="" target="_blank">
+            <FaLinkedinIn size={48} />
+          </a>
+        </div>
       </div>
     </aside>
   );
