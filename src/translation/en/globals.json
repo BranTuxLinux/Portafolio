@@ -1,14 +1,9 @@
 {
-  "header": {
-    "hello-world": "hello"
+  "bento-presentation": {
+    "header": "Hello, my name is Brandon.",
+    "paragraph": "I am passionate about programming and all its possibilities. I love creating innovative projects and exploring new styles that are out of the ordinary."
   },
-  "navbar": {
-    "home": "home",
-    "about": "about",
-    "portfolio": "portfolio",
-    "skills": "skills",
-    "projects": "projects",
-    "blog": "blog",
-    "contact": "contact"
+  "bento-language": {
+    "language": "EN"
   }
 }

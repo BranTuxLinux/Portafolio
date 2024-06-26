@@ -1,0 +1,8 @@
+@mixin AnimationES() {
+    transition: 200ms;
+  
+    &:hover {
+      transition: 200ms;
+      transform: scale(1.2);
+    }
+  }
