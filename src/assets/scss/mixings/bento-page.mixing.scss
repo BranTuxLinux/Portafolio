@@ -1,8 +1,13 @@
-@mixin AnimationES() {
+@mixin AnimationES {
+  transition: 200ms;
+
+  &:hover {
     transition: 200ms;
-  
-    &:hover {
-      transition: 200ms;
-      transform: scale(1.2);
-    }
+    transform: scale(1.1);
   }
+};
+@mixin CenterFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+};

@@ -5,5 +5,12 @@
   },
   "bento-language": {
     "language": "EN"
+  },
+  "bento-contact": {
+    "title": "Contact me"
+  },
+  "bento-years": {
+    "title": "years",
+    "years": 21
   }
 }

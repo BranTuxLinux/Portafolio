@@ -16,6 +16,7 @@ export const CardComponent = ({
   buttonLabel,
   buttonOnClick,
   classN,
+  Gif,
 }) => {
   return (
     <Card className={`col-span-12 sm:col-span-4 h-[300px] ${classN} `}>
@@ -23,8 +24,11 @@ export const CardComponent = ({
       {imageUrl && (
         <Image src={imageUrl} alt="Card image" className="card-image" />
       )}
+      {Gif && (
+        <iframe src={Gif} style=""  className="giphy-embed bento-gif" allowFullScreen></iframe>
+      )}
       <CardBody>
-        <p>{children}</p>
+        {children}
       </CardBody>
       {footer && <CardFooter>{footer}</CardFooter>}
       {buttonLabel && buttonOnClick && (
@@ -43,4 +47,5 @@ CardComponent.propTypes = {
   buttonLabel: PropTypes.string,
   buttonOnClick: PropTypes.func,
   classN: PropTypes.string,
+  Gif: PropTypes.string
 };
