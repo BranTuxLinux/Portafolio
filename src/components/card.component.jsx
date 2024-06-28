@@ -17,20 +17,26 @@ export const CardComponent = ({
   buttonOnClick,
   classN,
   Gif,
-  isPressable=false
+  isPressable = false,
 }) => {
   return (
-    <Card className={`col-span-12 sm:col-span-4 h-[300px] ${classN} `} isPressable={isPressable}>
+    <Card
+      className={`col-span-12 sm:col-span-4 h-[300px] ${classN} `}
+      isPressable={isPressable}
+    >
       {head && <CardHeader>{head}</CardHeader>}
       {imageUrl && (
         <Image src={imageUrl} alt="Card image" className="card-image" />
       )}
       {Gif && (
-        <iframe src={Gif} style=""  className="giphy-embed bento-gif" allowFullScreen></iframe>
+        <iframe
+          src={Gif}
+          style=""
+          className="giphy-embed bento-gif"
+          allowFullScreen
+        ></iframe>
       )}
-      <CardBody>
-        {children}
-      </CardBody>
+      <CardBody>{children}</CardBody>
       {footer && <CardFooter>{footer}</CardFooter>}
       {buttonLabel && buttonOnClick && (
         <Button onClick={buttonOnClick} className="card-button">
@@ -49,5 +55,5 @@ CardComponent.propTypes = {
   buttonOnClick: PropTypes.func,
   classN: PropTypes.string,
   Gif: PropTypes.string,
-  isPressable: PropTypes.bool
+  isPressable: PropTypes.bool,
 };
