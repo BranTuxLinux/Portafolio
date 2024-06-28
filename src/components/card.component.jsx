@@ -17,9 +17,10 @@ export const CardComponent = ({
   buttonOnClick,
   classN,
   Gif,
+  isPressable=false
 }) => {
   return (
-    <Card className={`col-span-12 sm:col-span-4 h-[300px] ${classN} `}>
+    <Card className={`col-span-12 sm:col-span-4 h-[300px] ${classN} `} isPressable={isPressable}>
       {head && <CardHeader>{head}</CardHeader>}
       {imageUrl && (
         <Image src={imageUrl} alt="Card image" className="card-image" />
@@ -47,5 +48,6 @@ CardComponent.propTypes = {
   buttonLabel: PropTypes.string,
   buttonOnClick: PropTypes.func,
   classN: PropTypes.string,
-  Gif: PropTypes.string
+  Gif: PropTypes.string,
+  isPressable: PropTypes.bool
 };
