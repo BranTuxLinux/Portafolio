@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { CardComponent } from "../components/card.component";
 import { FaAngleRight, FaEnvelope, FaUpRightFromSquare } from "react-icons/fa6";
 import { NewPage } from "../components/NewPage.components";
-
+import imgWave from "../assets/img/wave.png";
 export const BentoPage = () => {
   const [t, i18n] = useTranslation("global");
 
@@ -11,14 +11,15 @@ export const BentoPage = () => {
   };
   return (
     <section className="bento-page">
-      <CardComponent classN={"bento-presentation bento-section"}>
+      <CardComponent classN={"bento-presentation bento-section bento-div-control"}>
+        <img src={imgWave}></img>
         <div>
           <h1>{t("bento-presentation.header")}</h1>
           <p>{t("bento-presentation.paragraph")}</p>
         </div>
       </CardComponent>
       <CardComponent
-        classN={"bento-section bento-language bento-center"}
+        classN={"bento-section bento-language"}
         isPressable={true}
       >
         <div onClick={changeLanguage}>
@@ -26,7 +27,7 @@ export const BentoPage = () => {
         </div>
       </CardComponent>
       <CardComponent
-        classN={"bento-section bento-contact bento-center"}
+        classN={"bento-section bento-contact"}
         isPressable={true}
       >
         <div>
@@ -34,14 +35,14 @@ export const BentoPage = () => {
         </div>
         <p>{t("bento-contact.title")}</p>
       </CardComponent>
-      <CardComponent classN={"bento-section bento-center bento-years"}>
-        <NewPage url={'https://cssgradient.io/'}>
+      <CardComponent classN={"bento-section bento-years"}>
+        <NewPage url={"https://cssgradient.io/"}>
           <h1>{t("bento-years.years")}</h1>
           <p>{t("bento-years.title")}</p>
         </NewPage>
       </CardComponent>
       <CardComponent
-        classN={"bento-section bento-proyects bento-center"}
+        classN={"bento-section bento-proyects"}
         isPressable={true}
       >
         <div className="recover">
@@ -53,7 +54,7 @@ export const BentoPage = () => {
         </div>
       </CardComponent>
       <CardComponent
-        classN={"bento-section bento-github bento-center"}
+        classN={"bento-section bento-github"}
         isPressable={true}
       >
         <div className="bento-link">

@@ -36,7 +36,7 @@ export const CardComponent = ({
           allowFullScreen
         ></iframe>
       )}
-      <CardBody>{children}</CardBody>
+      {children}
       {footer && <CardFooter>{footer}</CardFooter>}
       {buttonLabel && buttonOnClick && (
         <Button onClick={buttonOnClick} className="card-button">
