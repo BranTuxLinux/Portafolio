@@ -13,6 +13,8 @@ export const BentoPage = () => {
     <section className="bento-page">
       <CardComponent classN={"bento-presentation bento-section bento-div-control"}>
         <img src={imgWave}></img>
+        <img className="w2" src={imgWave}></img>
+
         <div>
           <h1>{t("bento-presentation.header")}</h1>
           <p>{t("bento-presentation.paragraph")}</p>
