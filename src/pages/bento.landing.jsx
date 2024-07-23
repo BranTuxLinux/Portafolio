@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { CardComponent } from "../components/card.component";
 import { FaAngleRight, FaEnvelope, FaUpRightFromSquare } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa6";
+
 import { NewPage } from "../components/NewPage.components";
 import imgWave from "../assets/img/wave.png";
 export const BentoPage = () => {
@@ -68,7 +70,9 @@ export const BentoPage = () => {
       </CardComponent>
       <CardComponent classN={"bento-section"}></CardComponent>
       <CardComponent classN={"bento-section"}></CardComponent>
-      <CardComponent classN={"bento-section"}></CardComponent>
+      <CardComponent classN={"bento-section bento-linkeding"}>
+        <FaLinkedinIn />
+        </CardComponent>
     </section>
   );
 };
