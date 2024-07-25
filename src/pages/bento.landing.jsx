@@ -68,11 +68,17 @@ export const BentoPage = () => {
           </div>
         </div>
       </CardComponent>
-      <CardComponent classN={"bento-section"}></CardComponent>
-      <CardComponent classN={"bento-section"}></CardComponent>
-      <CardComponent classN={"bento-section bento-linkeding"}>
+      <CardComponent classN={"bento-section bento-music"}></CardComponent>
+      <CardComponent classN={"bento-section bento-linkeding"} isPressable={true} >
         <FaLinkedinIn />
-        </CardComponent>
+        <div className="arrow">
+            <FaUpRightFromSquare />
+          </div>
+      </CardComponent>
+        <CardMusic/>
+      <CardComponent classN={"bento-section"}>
+      </CardComponent>
+
     </section>
   );
 };

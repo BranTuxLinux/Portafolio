@@ -1,0 +1,14 @@
+@mixin BentoGithub{
+    & .bento-github {
+    transition: 200ms;
+    margin: 0;
+    padding: 0;
+    grid-row: 3/5;
+    grid-column: 4/5;
+    background: url("https://media.giphy.com/media/KzJkzjggfGN5Py6nkT/giphy.gif") no-repeat center center/cover;
+
+    div {
+      padding: 0;
+    }
+  }
+}

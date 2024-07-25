@@ -2,7 +2,10 @@
 @import "../mixings/bento-page.mixing.scss";
 @import '../template/bento-presentation';
 @import "../template/bento-linkeding";
-
+@import "../components/arrow-box";
+@import "../template/bento-music";
+@import "../template/bento-link";
+@import "../template/bento-github";
 .bento-page {
   display: grid;
   width: 80%;
@@ -11,6 +14,7 @@
   gap: 15px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
+
   & .bento-section {
     border-radius: 30px;
     font-family: "ubuntu";
@@ -20,10 +24,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
+
   @include BentoPresentation;
-  @include BentoLinkeding;
-  
+
   & .bento-language {
     grid-column: 4/5;
     grid-row: 1/2;
@@ -32,22 +37,26 @@
       @include CenterFlex();
       transition: 100ms;
       cursor: pointer;
+
       h1 {
         font-size: 70px;
         @include AnimationES;
       }
     }
   }
+
   & .bento-contact {
     grid-column: 4/5;
     grid-row: 2/3;
     position: relative;
     cursor: pointer;
+
     div {
       @include CenterFlex;
       font-size: 100px;
       transition: transform 500ms;
     }
+
     p {
       font-size: 12px;
       font-weight: bold;
@@ -55,14 +64,17 @@
       opacity: 0;
       transition: transform 500ms, opacity 200ms;
     }
+
     &:hover p {
       transform: translateY(50px);
       opacity: 1;
     }
+
     &:hover div {
       transform: translateY(-10px);
     }
   }
+
   & .bento-years {
     background-color: #d53e41;
     font-weight: bold;
@@ -70,22 +82,26 @@
     a {
       cursor: pointer;
     }
+
     & h1 {
       font-size: 50px;
       margin: 0;
     }
+
     & p {
       font-size: 24px;
     }
   }
+
   & .bento-proyects {
     grid-column: 2/4;
-    background: url("https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif")
-      no-repeat center center/cover;
+    background: url("https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif") no-repeat center center/cover;
+
     div {
       margin: 0;
       padding: 0px;
     }
+
     & .recover {
       width: 100%;
       height: 100%;
@@ -98,6 +114,7 @@
       flex-direction: column;
       position: relative;
       cursor: pointer;
+
       div {
         position: absolute;
         top: 50%;
@@ -112,42 +129,12 @@
       }
     }
   }
-  & .bento-github {
-    transition: 200ms;
-    margin: 0;
-    padding: 0;
-    grid-row: 3/5;
-    grid-column: 4/5;
-    background: url("https://media.giphy.com/media/KzJkzjggfGN5Py6nkT/giphy.gif")
-      no-repeat center center/cover;
-    div {
-      padding: 0;
-    }
-  }
-  & .bento-link {
-    transition: 200ms;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 0;
-    padding: 0;
 
-    & .arrow {
-      margin: 0;
-      padding: 0 !important;
-      position: absolute;
-      right: 5%;
-      top: 5%;
-      transition: 200ms;
-    }
-    &:hover {
-      transition: 200ms;
-      background-color: #46296d8e;
-    }
-  }
+  @include BentoGithub;
+
+  @include BentoLink;
+  @include BentoMusic;
+
+  @include BentoLinkeding;
+
 }

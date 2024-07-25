@@ -1,5 +1,9 @@
 @mixin BentoLinkeding {
-    .bento-linkeding{
-        color: red;
+    .bento-linkeding {
+        width: 100%;
+        height: 100%;
+        font-size: $Font-size-Icon;
+        background-color: rgb(28, 28, 68);
+        @include ArrowBox;
     }
 }

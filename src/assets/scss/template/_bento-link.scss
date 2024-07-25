@@ -1,0 +1,23 @@
+@mixin BentoLink {
+    & .bento-link {
+
+        transition: 200ms;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    
+        @include ArrowBox;
+    
+        &:hover {
+          transition: 200ms;
+          background-color: #46296d8e;
+        }
+      }
+}

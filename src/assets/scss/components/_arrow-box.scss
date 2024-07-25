@@ -1,0 +1,11 @@
+@mixin ArrowBox {
+    .arrow {
+        margin: 0;
+        padding: 0 !important;
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        transition: 200ms;
+        font-size: 20px;
+      }
+}
