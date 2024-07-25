@@ -5,9 +5,9 @@ import { FaLinkedinIn } from "react-icons/fa6";
 
 import { NewPage } from "../components/NewPage.components";
 import imgWave from "../assets/img/wave.png";
+import CardMusic from "../components/music.component";
 export const BentoPage = () => {
   const [t, i18n] = useTranslation("global");
-
   const changeLanguage = () => {
     i18n.changeLanguage(t("bento-language.language") == "ES" ? "en" : "es");
   };
@@ -68,17 +68,17 @@ export const BentoPage = () => {
           </div>
         </div>
       </CardComponent>
-      <CardComponent classN={"bento-section bento-music"}></CardComponent>
+      <CardComponent classN={"bento-section bento-music"}>
+        <CardMusic />
+      </CardComponent>
       <CardComponent classN={"bento-section bento-linkeding"} isPressable={true} >
         <FaLinkedinIn />
         <div className="arrow">
-            <FaUpRightFromSquare />
-          </div>
+          <FaUpRightFromSquare />
+        </div>
       </CardComponent>
-        <CardMusic/>
       <CardComponent classN={"bento-section"}>
       </CardComponent>
-
     </section>
   );
 };

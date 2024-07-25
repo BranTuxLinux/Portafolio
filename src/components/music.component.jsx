@@ -1,35 +1,35 @@
-import React from "react";
-import {Card, CardBody, Image, Button, Slider} from "@nextui-org/react";
-import {HeartIcon} from "./HeartIcon";
-import {PauseCircleIcon} from "./PauseCircleIcon";
-import {NextIcon} from "./NextIcon";
-import {PreviousIcon} from "./PreviousIcon";
-import {RepeatOneIcon} from "./RepeatOneIcon";
-import {ShuffleIcon} from "./ShuffleIcon";
+
+import { Card, CardBody, Image, Button, Slider } from "@nextui-org/react";
+import { HeartIcon } from "./components-music/heartIcon";
+import { RepeatOneIcon } from "./components-music/RepeatIcon";
+import { PreviousIcon } from "./components-music/PreviusIcon";
+import { PauseCircleIcon } from "./components-music/PauseCircleIcon";
+import {NextIcon} from "./components-music/NextIcon"
+import {ShuffleIcon} from "./components-music/ShuffleIcon"
+import { useState } from "react";
 
 export default function CardMusic() {
-  const [liked, setLiked] = React.useState(false);
+  const [liked, setLiked] = useState(false);
 
   return (
     <Card
       isBlurred
       className="border-none bg-background/60 dark:bg-default-100/50 max-w-[610px]"
+      style={{width:"100%"}}
       shadow="sm"
     >
-      <CardBody>
-        <div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 items-center justify-center">
-          <div className="relative col-span-6 md:col-span-4">
+      <CardBody style={{width:"100%"}}>
+        <div className="flex flex-wrap flex-row items-center justify-center " style={{width:"100%"}}>
+          <div className="relative col-span-5 md:col-span-4">
             <Image
               alt="Album cover"
               className="object-cover"
-              height={200}
               shadow="md"
               src="https://nextui.org/images/album-cover.png"
-              width="100%"
             />
           </div>
 
-          <div className="flex flex-col col-span-6 md:col-span-8">
+          <div className="flex flex-col col-span-6 md:col-span-8 " style={{ width: "60%", paddingLeft:"20px"}}>
             <div className="flex justify-between items-start">
               <div className="flex flex-col gap-0">
                 <h3 className="font-semibold text-foreground/90">Daily Mix</h3>
