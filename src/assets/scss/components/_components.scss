@@ -1,11 +1,14 @@
 @import "../base/colors";
 @import "../mixings/bento-page.mixing.scss";
-@import '../template/bento-presentation';
+@import "../template/bento-presentation";
 @import "../template/bento-linkeding";
 @import "../components/arrow-box";
 @import "../template/bento-music";
 @import "../template/bento-link";
 @import "../template/bento-github";
+@import "../template/bento-levelEnglish";
+@import "../template/bento-x";
+@import "../template/bento-discord";
 .bento-page {
   display: grid;
   width: 80%;
@@ -95,7 +98,8 @@
 
   & .bento-proyects {
     grid-column: 2/4;
-    background: url("https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif") no-repeat center center/cover;
+    background: url("https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif")
+      no-repeat center center/cover;
 
     div {
       margin: 0;
@@ -136,5 +140,7 @@
   @include BentoMusic;
 
   @include BentoLinkeding;
-
+  @include LevelEnglish;
+  @include Bento-x;
+  @include Bento-discord;
 }

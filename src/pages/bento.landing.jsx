@@ -1,11 +1,18 @@
 import { useTranslation } from "react-i18next";
 import { CardComponent } from "../components/card.component";
-import { FaAngleRight, FaEnvelope, FaUpRightFromSquare } from "react-icons/fa6";
+import {
+  FaAngleRight,
+  FaEnvelope,
+  FaXTwitter,
+  FaDiscord,
+} from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 
 import { NewPage } from "../components/NewPage.components";
 import imgWave from "../assets/img/wave.png";
 import CardMusic from "../components/music.component";
+import { Weather } from "../components/wheather";
+import { ArrowBox } from "../components/arrowbox";
 export const BentoPage = () => {
   const [t, i18n] = useTranslation("global");
   const changeLanguage = () => {
@@ -13,7 +20,9 @@ export const BentoPage = () => {
   };
   return (
     <section className="bento-page">
-      <CardComponent classN={"bento-presentation bento-section bento-div-control"}>
+      <CardComponent
+        classN={"bento-presentation bento-section bento-div-control"}
+      >
         <img src={imgWave}></img>
         <img className="w2" src={imgWave}></img>
 
@@ -22,18 +31,12 @@ export const BentoPage = () => {
           <p>{t("bento-presentation.paragraph")}</p>
         </div>
       </CardComponent>
-      <CardComponent
-        classN={"bento-section bento-language"}
-        isPressable={true}
-      >
+      <CardComponent classN={"bento-section bento-language"} isPressable={true}>
         <div onClick={changeLanguage}>
           <h1> {t("bento-language.language")}</h1>
         </div>
       </CardComponent>
-      <CardComponent
-        classN={"bento-section bento-contact"}
-        isPressable={true}
-      >
+      <CardComponent classN={"bento-section bento-contact"} isPressable={true}>
         <div>
           <FaEnvelope />
         </div>
@@ -45,10 +48,7 @@ export const BentoPage = () => {
           <p>{t("bento-years.title")}</p>
         </NewPage>
       </CardComponent>
-      <CardComponent
-        classN={"bento-section bento-proyects"}
-        isPressable={true}
-      >
+      <CardComponent classN={"bento-section bento-proyects"} isPressable={true}>
         <div className="recover">
           <h1>Mis Proyectos</h1>
           <p>Como son los proyectos</p>
@@ -57,27 +57,42 @@ export const BentoPage = () => {
           </div>
         </div>
       </CardComponent>
-      <CardComponent
-        classN={"bento-section bento-github"}
-        isPressable={true}
-      >
+      <CardComponent classN={"bento-section bento-github"} isPressable={true}>
         <div className="bento-link">
           <h1>GitHub</h1>
-          <div className="arrow">
-            <FaUpRightFromSquare />
-          </div>
+          <ArrowBox />
         </div>
       </CardComponent>
       <CardComponent classN={"bento-section bento-music"}>
         <CardMusic />
       </CardComponent>
-      <CardComponent classN={"bento-section bento-linkeding"} isPressable={true} >
+      <CardComponent
+        classN={"bento-section bento-linkeding"}
+        isPressable={true}
+      >
         <FaLinkedinIn />
-        <div className="arrow">
-          <FaUpRightFromSquare />
-        </div>
+        <ArrowBox />
       </CardComponent>
-      <CardComponent classN={"bento-section"}>
+      <CardComponent classN={"bento-section levelEnglish"}>
+        <h1>B2</h1>
+        <p>level</p>
+      </CardComponent>
+      <CardComponent classN={"bento-section clima"}>
+        <Weather />
+      </CardComponent>
+      <CardComponent classN={"bento-section bento-x"} isPressable>
+        <ArrowBox />
+        <FaXTwitter size={"20%"} />
+      </CardComponent>
+      <CardComponent classN={"bento-section bento-discord"} isPressable>
+        <ArrowBox />
+        <FaDiscord size={"20%"} />
+      </CardComponent>
+      <CardComponent classN={"bento-section bento-experience"}>
+        <h1>FullStack </h1>
+      </CardComponent>
+      <CardComponent classN={"bento-section bento-tecnologies"}>
+        <h1>Conjunto de tecnologias</h1>
       </CardComponent>
     </section>
   );

@@ -1,0 +1,6 @@
+@mixin Bento-discord{
+    .bento-discord{
+        background-color: rgb(28, 28, 68);
+    }
+    @include ArrowBox;
+}
