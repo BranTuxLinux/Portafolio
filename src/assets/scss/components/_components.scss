@@ -9,6 +9,8 @@
 @import "../template/bento-levelEnglish";
 @import "../template/bento-x";
 @import "../template/bento-discord";
+@import "../template/bento-experience";
+@import "../template/bento-technologies";
 .bento-page {
   display: grid;
   width: 80%;
@@ -143,4 +145,6 @@
   @include LevelEnglish;
   @include Bento-x;
   @include Bento-discord;
+  @include BentoExperience;
+  @include Technologies;
 }

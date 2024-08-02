@@ -12,13 +12,11 @@ export const Weather = () => {
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`
     );
     const response = await data.json();
-    // console.log(response);
     setWheather(response);
   };
   useEffect(() => {
-    
     ApiWeather();
-    console.log('Api')
+    console.log("Api");
 
     const intervalId = setInterval(() => {
       const ahora = new Date();
@@ -43,13 +41,15 @@ export const Weather = () => {
       {Weather == null ? (
         <h1>Cargando...</h1>
       ) : (
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center relative">
           <img
             src={`https://openweathermap.org/img/wn/${Weather.weather[0].icon}@2x.png`}
             alt="Img"
-            width={"150px"}
+            width={"40%"}
+            className="absolute "
+            style={{ padding: 0, bottom: "40px" }}
           />
-          <h1>Medellín, Colombia</h1>
+          <h1 className="">Medellín, Colombia</h1>
         </div>
       )}
       <h5>{time}</h5>

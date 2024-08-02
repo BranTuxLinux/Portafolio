@@ -1,0 +1,11 @@
+@mixin BentoExperience{
+    .bento-experience{
+        text-wrap: balance;
+        text-align: center;
+        background-color: rgb(50, 134, 50);
+        .icon-js{
+            color: #f7f744;
+            text-shadow: 2px 2px 2px black;
+        }
+    }
+}

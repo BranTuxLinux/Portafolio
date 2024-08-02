@@ -20,9 +20,10 @@ export default function CardMusic() {
     >
       <CardBody style={{width:"100%"}}>
         <div className="flex flex-wrap flex-row items-center justify-center " style={{width:"100%"}}>
-          <div className="relative col-span-5 md:col-span-4">
+          <div className="relative col-span-4 md:col-span-4">
             <Image
               alt="Album cover"
+              style={{maxWidth:"150px"}}
               className="object-cover"
               shadow="md"
               src="https://nextui.org/images/album-cover.png"

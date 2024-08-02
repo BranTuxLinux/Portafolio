@@ -5,6 +5,7 @@ import {
   FaEnvelope,
   FaXTwitter,
   FaDiscord,
+  FaJs,
 } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 
@@ -13,6 +14,7 @@ import imgWave from "../assets/img/wave.png";
 import CardMusic from "../components/music.component";
 import { Weather } from "../components/wheather";
 import { ArrowBox } from "../components/arrowbox";
+import { Technologies } from "../components/Tecnologies";
 export const BentoPage = () => {
   const [t, i18n] = useTranslation("global");
   const changeLanguage = () => {
@@ -89,10 +91,15 @@ export const BentoPage = () => {
         <FaDiscord size={"20%"} />
       </CardComponent>
       <CardComponent classN={"bento-section bento-experience"}>
-        <h1>FullStack </h1>
+        <FaJs size={"20%"} className="icon-js"/>
+        <h1>Desarrollador fullstack con JavaScript </h1>
+        <p>2022</p>
       </CardComponent>
-      <CardComponent classN={"bento-section bento-tecnologies"}>
-        <h1>Conjunto de tecnologias</h1>
+      <CardComponent classN={"bento-section bento-Technologies"}>
+        <Technologies />
+      </CardComponent>
+      <CardComponent classN={"bento-section bento-linux"}>
+        <h1>Linux</h1>
       </CardComponent>
     </section>
   );
