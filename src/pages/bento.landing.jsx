@@ -7,8 +7,7 @@ import {
   FaDiscord,
   FaJs,
 } from "react-icons/fa6";
-import { FaLinkedinIn } from "react-icons/fa6";
-
+import { FaLinkedinIn, FaLinux } from "react-icons/fa6";
 import { NewPage } from "../components/NewPage.components";
 import imgWave from "../assets/img/wave.png";
 import CardMusic from "../components/music.component";
@@ -90,16 +89,17 @@ export const BentoPage = () => {
         <ArrowBox />
         <FaDiscord size={"20%"} />
       </CardComponent>
-      <CardComponent classN={"bento-section bento-experience"}>
-        <FaJs size={"20%"} className="icon-js"/>
+      <CardComponent classN={"bento-section bento-experience"} isPressable>
+        <ArrowBox />
+        <FaJs size={"20%"} className="icon-js" />
         <h1>Desarrollador fullstack con JavaScript </h1>
-        <p>2022</p>
+        <p>Mi experiencia</p>
       </CardComponent>
       <CardComponent classN={"bento-section bento-Technologies"}>
         <Technologies />
       </CardComponent>
-      <CardComponent classN={"bento-section bento-linux"}>
-        <h1>Linux</h1>
+      <CardComponent classN={"bento-section bento-linux "}>
+        <FaLinux size={"40%"} />
       </CardComponent>
     </section>
   );

@@ -1,16 +1,4 @@
-@import "../base/colors";
-@import "../mixings/bento-page.mixing.scss";
-@import "../template/bento-presentation";
-@import "../template/bento-linkeding";
-@import "../components/arrow-box";
-@import "../template/bento-music";
-@import "../template/bento-link";
-@import "../template/bento-github";
-@import "../template/bento-levelEnglish";
-@import "../template/bento-x";
-@import "../template/bento-discord";
-@import "../template/bento-experience";
-@import "../template/bento-technologies";
+@import "./imports.scss";
 .bento-page {
   display: grid;
   width: 80%;
@@ -147,4 +135,5 @@
   @include Bento-discord;
   @include BentoExperience;
   @include Technologies;
+  @include BentoLinux;
 }

@@ -45,9 +45,7 @@ export const Weather = () => {
           <img
             src={`https://openweathermap.org/img/wn/${Weather.weather[0].icon}@2x.png`}
             alt="Img"
-            width={"40%"}
-            className="absolute "
-            style={{ padding: 0, bottom: "40px" }}
+            max-width={"40%"}
           />
           <h1 className="">Medellín, Colombia</h1>
         </div>
