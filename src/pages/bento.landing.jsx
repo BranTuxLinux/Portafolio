@@ -32,23 +32,27 @@ export const BentoPage = () => {
           <p>{t("bento-presentation.paragraph")}</p>
         </div>
       </CardComponent>
+
       <CardComponent classN={"bento-section bento-language"} isPressable={true}>
         <div onClick={changeLanguage}>
           <h1> {t("bento-language.language")}</h1>
         </div>
       </CardComponent>
-      <CardComponent classN={"bento-section bento-contact"} isPressable={true}>
-        <div>
-          <FaEnvelope />
-        </div>
-        <p>{t("bento-contact.title")}</p>
-      </CardComponent>
+
       <CardComponent classN={"bento-section bento-years"}>
         <NewPage url={"https://cssgradient.io/"}>
           <h1>{t("bento-years.years")}</h1>
           <p>{t("bento-years.title")}</p>
         </NewPage>
       </CardComponent>
+
+      <CardComponent classN={"bento-section bento-experience"} isPressable>
+        <ArrowBox />
+        <FaJs size={"20%"} className="icon-js" />
+        <h1>Desarrollador fullstack con JavaScript </h1>
+        <p>Mi experiencia</p>
+      </CardComponent>
+
       <CardComponent classN={"bento-section bento-proyects"} isPressable={true}>
         <div className="recover">
           <h1>Mis Proyectos</h1>
@@ -58,15 +62,31 @@ export const BentoPage = () => {
           </div>
         </div>
       </CardComponent>
+
       <CardComponent classN={"bento-section bento-github"} isPressable={true}>
         <div className="bento-link">
           <h1>GitHub</h1>
           <ArrowBox />
         </div>
       </CardComponent>
+
       <CardComponent classN={"bento-section bento-music"}>
         <CardMusic />
       </CardComponent>
+      <CardComponent classN={"bento-section bento-x"} isPressable>
+        <ArrowBox />
+        <FaXTwitter size={"20%"} />
+      </CardComponent>
+
+      <CardComponent classN={"bento-section levelEnglish"}>
+        <h1>B2</h1>
+        <p>level</p>
+      </CardComponent>
+
+      <CardComponent classN={"bento-section bento-linux "}>
+        <FaLinux size={"40%"} />
+      </CardComponent>
+
       <CardComponent
         classN={"bento-section bento-linkeding"}
         isPressable={true}
@@ -74,32 +94,24 @@ export const BentoPage = () => {
         <FaLinkedinIn />
         <ArrowBox />
       </CardComponent>
-      <CardComponent classN={"bento-section levelEnglish"}>
-        <h1>B2</h1>
-        <p>level</p>
-      </CardComponent>
-      <CardComponent classN={"bento-section clima"}>
-        <Weather />
-      </CardComponent>
-      <CardComponent classN={"bento-section bento-x"} isPressable>
-        <ArrowBox />
-        <FaXTwitter size={"20%"} />
+
+      <CardComponent classN={"bento-section bento-contact"} isPressable>
+        <div>
+          <FaEnvelope />
+        </div>
+        <p>{t("bento-contact.title")}</p>
       </CardComponent>
       <CardComponent classN={"bento-section bento-discord"} isPressable>
         <ArrowBox />
         <FaDiscord size={"20%"} />
       </CardComponent>
-      <CardComponent classN={"bento-section bento-experience"} isPressable>
-        <ArrowBox />
-        <FaJs size={"20%"} className="icon-js" />
-        <h1>Desarrollador fullstack con JavaScript </h1>
-        <p>Mi experiencia</p>
-      </CardComponent>
+
       <CardComponent classN={"bento-section bento-Technologies"}>
         <Technologies />
       </CardComponent>
-      <CardComponent classN={"bento-section bento-linux "}>
-        <FaLinux size={"40%"} />
+
+      <CardComponent classN={"bento-section clima"}>
+        <Weather />
       </CardComponent>
     </section>
   );

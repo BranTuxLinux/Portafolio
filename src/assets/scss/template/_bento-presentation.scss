@@ -20,34 +20,32 @@
     }
     .w2 {
       opacity: 0.5;
-      animation: waveRun 30s both 500ms infinite  ;
+      animation: waveRun 30s both 500ms infinite;
       z-index: 2;
     }
     @keyframes waveRun {
       0% {
-        
         transform: translateX(0) translateX(0);
       }
-      50%{
+      50% {
         transform: translateY(200px) translateX(-25%);
       }
       100% {
         transform: translateY(0) translateX(-50%);
-        
-
       }
     }
     & div {
-      width: 60%;
-      height: 60%;
+      width: 80%;
+      height: 80%;
       text-wrap: balance;
       z-index: 10;
+      padding-left: 40px;
       & h1 {
         font-weight: bold;
-        font-size: 40px;
+        font-size: 50px;
       }
       & p {
-        font-size: 15px;
+        font-size: 25px;
       }
     }
   }

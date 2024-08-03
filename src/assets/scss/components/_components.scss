@@ -1,10 +1,13 @@
 @import "./imports.scss";
+
 .bento-page {
   display: grid;
   width: 80%;
   height: 150vh;
   margin: 40px auto;
   gap: 15px;
+  // grid-template-columns: repeat(auto-fill, minmax(4, 1fr));
+
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
 
@@ -23,8 +26,6 @@
   @include BentoPresentation;
 
   & .bento-language {
-    grid-column: 4/5;
-    grid-row: 1/2;
 
     & div {
       @include CenterFlex();
@@ -39,8 +40,6 @@
   }
 
   & .bento-contact {
-    grid-column: 4/5;
-    grid-row: 2/3;
     position: relative;
     cursor: pointer;
 
@@ -136,4 +135,12 @@
   @include BentoExperience;
   @include Technologies;
   @include BentoLinux;
+}
+@media (max-width: 768px){
+  .bento-page{
+    grid-template-columns: repeat(3, 1fr); 
+    & .bento-github{
+      grid-column: 3/4;
+    }
+  }
 }
