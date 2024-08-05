@@ -14,11 +14,16 @@ import CardMusic from "../components/music.component";
 import { Weather } from "../components/wheather";
 import { ArrowBox } from "../components/arrowbox";
 import { Technologies } from "../components/Tecnologies";
+
+
 export const BentoPage = () => {
   const [t, i18n] = useTranslation("global");
+  
   const changeLanguage = () => {
     i18n.changeLanguage(t("bento-language.language") == "ES" ? "en" : "es");
   };
+
+  
   return (
     <section className="bento-page">
       <CardComponent
@@ -39,7 +44,7 @@ export const BentoPage = () => {
         </div>
       </CardComponent>
 
-      <CardComponent classN={"bento-section bento-years"}>
+      <CardComponent classN={"bento-section bento-cv"}>
         <NewPage url={"https://cssgradient.io/"}>
           <h1>{t("bento-years.years")}</h1>
           <p>{t("bento-years.title")}</p>
@@ -48,7 +53,7 @@ export const BentoPage = () => {
 
       <CardComponent classN={"bento-section bento-experience"} isPressable>
         <ArrowBox />
-        <FaJs size={"20%"} className="icon-js" />
+        <FaJs size={"40%"} className="icon-js" />
         <h1>Desarrollador fullstack con JavaScript </h1>
         <p>Mi experiencia</p>
       </CardComponent>
@@ -70,12 +75,15 @@ export const BentoPage = () => {
         </div>
       </CardComponent>
 
-      <CardComponent classN={"bento-section bento-music"}>
+      <CardComponent
+        classN={"bento-section bento-music"}
+        style={{ height: "100%" }}
+      >
         <CardMusic />
       </CardComponent>
       <CardComponent classN={"bento-section bento-x"} isPressable>
         <ArrowBox />
-        <FaXTwitter size={"20%"} />
+        <FaXTwitter size={"40%"} />
       </CardComponent>
 
       <CardComponent classN={"bento-section levelEnglish"}>
@@ -103,7 +111,7 @@ export const BentoPage = () => {
       </CardComponent>
       <CardComponent classN={"bento-section bento-discord"} isPressable>
         <ArrowBox />
-        <FaDiscord size={"20%"} />
+        <FaDiscord size={"40%"} />
       </CardComponent>
 
       <CardComponent classN={"bento-section bento-Technologies"}>
