@@ -15,15 +15,13 @@ import { Weather } from "../components/wheather";
 import { ArrowBox } from "../components/arrowbox";
 import { Technologies } from "../components/Tecnologies";
 
-
 export const BentoPage = () => {
   const [t, i18n] = useTranslation("global");
-  
+
   const changeLanguage = () => {
     i18n.changeLanguage(t("bento-language.language") == "ES" ? "en" : "es");
   };
 
-  
   return (
     <section className="bento-page">
       <CardComponent
@@ -38,14 +36,23 @@ export const BentoPage = () => {
         </div>
       </CardComponent>
 
-      <CardComponent classN={"bento-section bento-language"} isPressable={true}>
-        <div onClick={changeLanguage}>
+      <CardComponent
+        classN={"bento-section bento-language"}
+        isPressable={true}
+        >
+        <div
+        style={{width:"100%", height:'100%'}}
+        onClick={changeLanguage}
+        
+        >
           <h1> {t("bento-language.language")}</h1>
         </div>
       </CardComponent>
 
-      <CardComponent classN={"bento-section bento-cv"}>
-        <NewPage url={"https://cssgradient.io/"}>
+      <CardComponent classN={"bento-section bento-cv"} isPressable>
+        <NewPage url={"https://cssgradient.io/"}
+        style={{width:"100%", height:'100%', }}
+        >
           <h1>{t("bento-years.years")}</h1>
           <p>{t("bento-years.title")}</p>
         </NewPage>
