@@ -141,6 +141,12 @@
     grid-row: 5/7;
     height: 100% !important;
     background-color: rgb(20, 20, 20);
+    & div{
+
+      justify-content: center !important;
+      align-items: center !important;
+      width: 100%;
+    }
     & .img-container {
       width: 100%;
     }
@@ -176,6 +182,16 @@
     grid-column: 2/4;
     grid-row: 4/5;
   }
+  .levelEnglish{
+    h1{
+
+      font-size: 40px !important;
+    }
+    p{
+      font-size: 20px !important;
+    }
+  }
+
 }
 @media (min-width: 769px) and (max-width: 1000px) {
   .bento-proyects {
@@ -193,5 +209,10 @@
   }
   .bento-section {
     height: 200px;
+  }
+  .bento-music{
+    img{
+      width: 100px !important;
+    }
   }
 }
