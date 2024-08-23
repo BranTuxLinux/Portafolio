@@ -50,8 +50,9 @@ export const BentoPage = () => {
       </CardComponent>
 
       <CardComponent classN={"bento-section bento-cv"} isPressable>
-        <NewPage url={"https://cssgradient.io/"}
-        style={{width:"100%", height:'100%', }}
+        <NewPage url={"https://cssgradient.io/"} 
+        
+        
         >
           <h1>{t("bento-years.years")}</h1>
           <p>{t("bento-years.title")}</p>
