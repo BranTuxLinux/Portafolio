@@ -36,24 +36,14 @@ export const BentoPage = () => {
         </div>
       </CardComponent>
 
-      <CardComponent
-        classN={"bento-section bento-language"}
-        isPressable={true}
-        >
-        <div
-        style={{width:"100%", height:'100%'}}
-        onClick={changeLanguage}
-        
-        >
+      <CardComponent classN={"bento-section bento-language"} isPressable={true}>
+        <div style={{ width: "100%", height: "100%" }} onClick={changeLanguage}>
           <h1> {t("bento-language.language")}</h1>
         </div>
       </CardComponent>
 
       <CardComponent classN={"bento-section bento-cv"} isPressable>
-        <NewPage url={"https://cssgradient.io/"} 
-        
-        
-        >
+        <NewPage url={"https://cssgradient.io/"}>
           <h1>{t("bento-years.years")}</h1>
           <p>{t("bento-years.title")}</p>
         </NewPage>
@@ -122,7 +112,7 @@ export const BentoPage = () => {
         <FaDiscord size={"40%"} />
       </CardComponent>
 
-      <CardComponent classN={"bento-section bento-Technologies"}>
+      <CardComponent classN={"bento-section bento-Technologies "} >
         <Technologies />
       </CardComponent>
 
