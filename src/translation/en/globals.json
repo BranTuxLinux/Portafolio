@@ -9,8 +9,8 @@
   "bento-contact": {
     "title": "Contact me"
   },
-  "bento-years": {
-    "title": "years",
-    "years": 21
+  "experience": {
+    "ex": "Fullstack Developer with JavaScript",
+    "data": "My experience"
   }
 }
